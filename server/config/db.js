@@ -8,7 +8,8 @@ const connectDB = async () => {
     console.log(`✅ MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
     console.error(`❌ MongoDB connection failed: ${error.message}`);
-    process.exit(1);
+    console.error('⚠️  Server will continue running but database features will not work.');
+    // Don't exit — let the server stay alive so Render can bind the port
   }
 };
 
