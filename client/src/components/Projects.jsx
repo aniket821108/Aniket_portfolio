@@ -79,7 +79,7 @@ export default function Projects() {
                 <div className="relative flex flex-col md:flex-row md:items-start gap-6">
                   {/* Icon */}
                   <div
-                    className={`flex-shrink-0 w-13 h-13 w-12 h-12 rounded-xl ${iconBg} flex items-center justify-center transition-colors duration-300`}
+                    className={`flex-shrink-0 w-12 h-12 rounded-xl ${iconBg} flex items-center justify-center transition-colors duration-300`}
                   >
                     <Icon size={22} className={iconColor} />
                   </div>

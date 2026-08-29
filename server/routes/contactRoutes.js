@@ -10,7 +10,16 @@ const contactValidation = [
   body('message').trim().isLength({ min: 20, max: 2000 }).withMessage('Message must be 20–2000 characters'),
 ];
 
+// Simple API key guard for admin-only routes
+const adminAuth = (req, res, next) => {
+  const key = req.headers['x-admin-key'];
+  if (!process.env.ADMIN_API_KEY || key !== process.env.ADMIN_API_KEY) {
+    return res.status(401).json({ success: false, message: 'Unauthorized' });
+  }
+  next();
+};
+
 router.post('/', contactValidation, submitContact);
-router.get('/', getContacts);
+router.get('/', adminAuth, getContacts);
 
 module.exports = router;

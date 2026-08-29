@@ -16,7 +16,7 @@ const fadeUp = {
 
 const SOCIAL = [
   { icon: Github, href: 'https://github.com/aniket821108', label: 'GitHub' },
-  { icon: Mail, href: 'mailto:aniket@example.com', label: 'Email' },
+  { icon: Mail, href: 'mailto:aniketkumar821108@gmail.com', label: 'Email' },
 ];
 
 export default function Hero() {
