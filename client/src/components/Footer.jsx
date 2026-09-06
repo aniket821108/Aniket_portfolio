@@ -10,7 +10,7 @@ const LINKS = [
   },
   {
     icon: Linkedin,
-    href: 'https://linkedin.com/in/aniketkumar821108',
+    href: 'https://www.linkedin.com/in/aniket-kumar-1225a7284/',
     label: 'LinkedIn',
   },
   {

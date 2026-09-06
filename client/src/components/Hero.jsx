@@ -75,7 +75,7 @@ const SOCIAL = [
   { icon: Github, href: 'https://github.com/aniket821108', label: 'GitHub' },
   {
     icon: Linkedin,
-    href: 'https://linkedin.com/in/aniketkumar821108',
+    href: 'https://www.linkedin.com/in/aniket-kumar-1225a7284/',
     label: 'LinkedIn',
   },
   {
@@ -175,7 +175,7 @@ export default function Hero() {
               </button>
             </Link>
             <a
-              href="/resume.pdf"
+              href="https://drive.google.com/drive/u/0/folders/1yghJTbs11AH3NEi8wv9HZCkAfKc5MiWD"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3.5 glass hover:border-cyan-accent/30 text-text-secondary hover:text-cyan-accent rounded-xl font-body font-semibold transition-all duration-300 group"

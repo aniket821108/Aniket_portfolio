@@ -63,6 +63,16 @@ export default function Navbar() {
           ))}
           <li>
             <a
+              href="https://drive.google.com/drive/u/0/folders/1yghJTbs11AH3NEi8wv9HZCkAfKc5MiWD"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg glass text-sm text-accent hover:bg-accent/10 hover:border-accent/30 transition-all duration-300 font-medium"
+            >
+              Resume
+            </a>
+          </li>
+          <li>
+            <a
               href="https://github.com/aniket821108"
               target="_blank"
               rel="noopener noreferrer"

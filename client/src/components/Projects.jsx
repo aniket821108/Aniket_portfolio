@@ -129,7 +129,7 @@ export default function Projects() {
         </motion.div>
 
         {/* Project cards */}
-        <div className="flex flex-col gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           <AnimatePresence mode="wait">
             {filtered.map((project, i) => {
               const Icon = CATEGORY_ICON[project.category] || Layers;
@@ -161,12 +161,18 @@ export default function Projects() {
                     className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-br ${catColor} pointer-events-none rounded-2xl`}
                   />
 
-                  <div className="relative flex flex-col md:flex-row md:items-start gap-6">
-                    {/* Icon */}
-                    <div
-                      className={`flex-shrink-0 w-12 h-12 rounded-xl ${iconBg} flex items-center justify-center transition-colors duration-300`}
-                    >
-                      <Icon size={22} className={accentColor} />
+                  <div className="relative flex flex-col gap-6">
+                    {/* Thumbnail / Image Area */}
+                    <div className="w-full h-48 md:h-56 rounded-xl overflow-hidden relative group-hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-500">
+                      {/* Premium abstract gradient background */}
+                      <div className={`absolute inset-0 bg-gradient-to-br ${project.category === 'ml' ? 'from-cyan-900 via-teal-900 to-emerald-900' : 'from-indigo-900 via-purple-900 to-fuchsia-900'} opacity-80 group-hover:scale-105 transition-transform duration-700 ease-out`} />
+                      
+                      {/* Abstract geometric patterns overlay */}
+                      <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent mix-blend-overlay" />
+                      
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <Icon size={48} className={`${accentColor} opacity-50 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500`} />
+                      </div>
                     </div>
 
                     <div className="flex-1 min-w-0">
