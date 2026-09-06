@@ -35,7 +35,7 @@ app.use(
     origin: (origin, callback) => {
       // Allow requests with no origin (mobile apps, curl, server-to-server)
       if (!origin) return callback(null, true);
-      if (allowedOrigins.includes(origin)) {
+      if (allowedOrigins.includes(origin) || origin.endsWith('.vercel.app')) {
         return callback(null, true);
       }
       return callback(new Error(`CORS: origin ${origin} not allowed`));
@@ -73,13 +73,7 @@ app.get('/api/health', (req, res) =>
   res.json({ success: true, message: 'API is running', env: process.env.NODE_ENV })
 );
 
-// Serve React in production
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/dist')));
-  app.get('*', (req, res) =>
-    res.sendFile(path.resolve(__dirname, '../client/dist', 'index.html'))
-  );
-}
+// The frontend is deployed separately on Vercel, so we don't serve static files here.
 
 // Global error handler
 app.use(errorHandler);
