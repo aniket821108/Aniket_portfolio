@@ -1,19 +1,33 @@
 import { motion } from 'framer-motion';
-import { GraduationCap, Calendar, MapPin, BookOpen } from 'lucide-react';
+import { GraduationCap, Calendar, MapPin, BookOpen, Award } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import SectionTitle from './ui/SectionTitle';
 
 const EDUCATION = [
   {
     degree: 'B.Tech in Computer Science & Engineering',
-    institution: 'Your University Name',
-    period: '2022 – 2026',
-    location: 'Your City, India',
+    institution: 'National Institute of Technology, Mizoram',
+    period: '2023 – Present',
+    location: 'Mizoram, India',
+    score: 'CGPA: 7.58 (Till 6th Semester)',
+    type: 'Undergraduate',
     highlights: [
       'Relevant Coursework: Data Structures & Algorithms, Machine Learning, Database Systems, Operating Systems, Computer Networks, Compiler Design',
       'Active member of coding club and ML research group',
     ],
     tags: ['DSA', 'Machine Learning', 'DBMS', 'OS', 'Computer Networks', 'Compiler Design'],
+  },
+  {
+    degree: 'Senior Secondary (XII)',
+    institution: 'S.P. Jain, Sasaram',
+    period: '2020 – 2022',
+    location: 'Sasaram, Bihar',
+    score: '83%',
+    type: 'Higher Secondary',
+    highlights: [
+      'Completed senior secondary education with focus on Science stream (PCM + Computer Science)',
+    ],
+    tags: ['Physics', 'Chemistry', 'Mathematics', 'Computer Science'],
   },
 ];
 
@@ -35,11 +49,11 @@ export default function Education() {
               initial={{ opacity: 0, x: -30 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{
-                delay: 0.2 + i * 0.1,
+                delay: 0.2 + i * 0.15,
                 duration: 0.75,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="relative pl-8 md:pl-24 pb-4"
+              className="relative pl-8 md:pl-24 pb-8"
             >
               {/* Timeline dot */}
               <div className="absolute left-[-4px] md:left-[24px] top-1.5 w-3.5 h-3.5 rounded-full bg-cyan-accent shadow-[0_0_20px_rgba(34,211,238,0.3)] border-2 border-background" />
@@ -51,7 +65,7 @@ export default function Education() {
                     <div className="flex items-center gap-2 mb-1.5">
                       <GraduationCap size={16} className="text-cyan-accent" />
                       <span className="font-mono text-xs text-cyan-accent/70 tracking-widest">
-                        EDUCATION
+                        {edu.type.toUpperCase()}
                       </span>
                     </div>
                     <h3 className="font-display text-xl md:text-2xl font-bold text-text-primary">
@@ -74,6 +88,14 @@ export default function Education() {
                   </div>
                 </div>
 
+                {/* Score */}
+                <div className="flex items-center gap-2 mb-5">
+                  <Award size={14} className="text-cyan-accent" />
+                  <span className="font-mono text-sm text-text-primary font-medium">
+                    {edu.score}
+                  </span>
+                </div>
+
                 {/* Highlights */}
                 <ul className="flex flex-col gap-3 mb-6">
                   {edu.highlights.map((h, j) => (
@@ -81,7 +103,7 @@ export default function Education() {
                       key={j}
                       initial={{ opacity: 0, x: -10 }}
                       animate={inView ? { opacity: 1, x: 0 } : {}}
-                      transition={{ delay: 0.35 + j * 0.07, duration: 0.5 }}
+                      transition={{ delay: 0.35 + i * 0.1 + j * 0.07, duration: 0.5 }}
                       className="flex gap-3 text-text-secondary font-body text-sm leading-relaxed"
                     >
                       <BookOpen

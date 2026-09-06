@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -8,8 +9,9 @@ import Education from './components/Education';
 import Achievements from './components/Achievements';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import NotFound from './components/NotFound';
 
-export default function App() {
+function Portfolio() {
   return (
     <div className="noise relative min-h-screen bg-background">
       {/* Dot-grid background texture */}
@@ -39,5 +41,16 @@ export default function App() {
 
       <Footer />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Portfolio />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

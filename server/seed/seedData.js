@@ -17,6 +17,7 @@ const projects = [
     githubUrl: 'https://github.com/aniket821108',
     featured: true,
     order: 1,
+    status: 'Completed',
   },
   {
     title: 'Predictive Maintenance System',
@@ -29,6 +30,7 @@ const projects = [
     githubUrl: 'https://github.com/aniket821108',
     featured: true,
     order: 2,
+    status: 'Completed',
   },
 ];
 
