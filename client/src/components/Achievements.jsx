@@ -32,7 +32,7 @@ export default function Achievements() {
   return (
     <section id="achievements" ref={ref} className="py-28 px-6">
       <div className="max-w-6xl mx-auto">
-        <SectionTitle index={5} label="Achievements" inView={inView} />
+        <SectionTitle index={6} label="Achievements" inView={inView} />
 
         <div className="grid md:grid-cols-2 gap-6">
           {ACHIEVEMENTS.map(({ icon: Icon, badge, title, desc, accent, iconColor, iconBg, badgeColor }, i) => (

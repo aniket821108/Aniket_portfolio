@@ -63,7 +63,7 @@ export default function Contact() {
   return (
     <section id="contact" ref={ref} className="py-32 px-6">
       <div className="max-w-5xl mx-auto">
-        <SectionTitle index={6} label="Contact" inView={inView} />
+        <SectionTitle index={7} label="Contact" inView={inView} />
 
         <motion.p
           initial={{ opacity: 0, y: 16 }}
