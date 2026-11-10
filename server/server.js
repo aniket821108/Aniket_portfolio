@@ -79,7 +79,6 @@ app.get('/api/health', (req, res) =>
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
-const HOST = process.env.NODE_ENV === 'production' ? '0.0.0.0' : 'localhost';
-app.listen(PORT, HOST, () =>
-  console.log(`🚀 Server running on http://${HOST}:${PORT} [${process.env.NODE_ENV || 'development'}]`)
+app.listen(PORT, '0.0.0.0', () =>
+  console.log(`🚀 Server running on port ${PORT} [${process.env.NODE_ENV || 'development'}]`)
 );
