@@ -11,11 +11,52 @@ import {
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import SectionTitle from './ui/SectionTitle';
 import { fetchProjects } from '../utils/api';
+import GithubActivity from './GithubActivity';
 
 const FALLBACK = [
   {
     _id: '1',
-    title: 'E-Shop — AI Powered E-Commerce',
+    title: 'INDILEX — Legal Event Extraction & LLM Benchmark',
+    category: 'ml',
+    featured: true,
+    description:
+      'NLP pipeline extracting structured legal entities from 762+ Indian High Court judgments across 7 courts and 3 languages. Benchmarked 4 open-source LLMs (Qwen2.5, Gemma-2, DeepSeek-R1) with vLLM tensor-parallel inference.',
+    techStack: [
+      'Python',
+      'PyTorch',
+      'HuggingFace',
+      'Qwen2.5',
+      'Gemma-2',
+      'DeepSeek-R1',
+      'vLLM',
+      'NLP',
+    ],
+    githubUrl: 'https://github.com/aniket821108/Indilex',
+    status: 'Completed',
+  },
+  {
+    _id: '2',
+    title: 'Aerial Image Segmentation & Geospatial AI',
+    category: 'ml',
+    featured: true,
+    description:
+      'Unsupervised Domain Adaptation (Urban to Rural) with DeepLabV3+ ResNet-50 and GDAL Geospatial Engine on LoveDA benchmark for terrain analysis in Mizoram, featuring Gemini 1.5 Flash Vision guardrails.',
+    techStack: [
+      'PyTorch',
+      'DeepLabV3+',
+      'GDAL',
+      'ResNet-50',
+      'Google Gemini AI',
+      'React.js',
+      'Flask',
+      'OpenCV',
+    ],
+    githubUrl: 'https://github.com/aniket821108/Aerial-LandCover-Segmentation-Mizoram',
+    status: 'Completed',
+  },
+  {
+    _id: '3',
+    title: 'E-Shop — AI Powered E-Commerce Platform',
     category: 'fullstack',
     featured: true,
     description:
@@ -30,11 +71,11 @@ const FALLBACK = [
       'Redux',
       'Tailwind CSS',
     ],
-    githubUrl: 'https://github.com/aniket821108',
+    githubUrl: 'https://github.com/aniket821108/ecommerce-churn-prediction',
     status: 'Completed',
   },
   {
-    _id: '2',
+    _id: '4',
     title: 'Predictive Maintenance System',
     category: 'ml',
     featured: true,
@@ -246,6 +287,9 @@ export default function Projects() {
             })}
           </AnimatePresence>
         </div>
+
+        {/* Live GitHub Telemetry & Open Source Activity */}
+        <GithubActivity />
 
         {/* GitHub CTA */}
         <motion.div

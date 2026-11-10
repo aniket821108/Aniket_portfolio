@@ -5,6 +5,22 @@ import SectionTitle from './ui/SectionTitle';
 
 const EXPERIENCES = [
   {
+    role: 'Research Intern (NLP & LLMs)',
+    company: 'Indian Institute of Technology Patna',
+    shortCompany: 'IIT Patna',
+    period: '2026',
+    location: 'Patna, Bihar',
+    url: 'https://www.iitp.ac.in',
+    type: 'Research Internship',
+    highlights: [
+      'Engineered INDILEX: an end-to-end NLP & LLM benchmark for structured legal event extraction from 762+ court judgments across 7 Indian High Courts and 3 languages (Hindi, Assamese, English).',
+      'Benchmarked 4 open-source LLMs (Qwen2.5-7B, Qwen2.5-14B, Gemma-2-9B, DeepSeek-R1) using a 4E Framework (Entity-Event-Evidence-Evaluation).',
+      'Designed an intelligent three-stage chunking and routing pipeline to process legal judgments exceeding 50K+ characters without context loss.',
+      'Implemented tensor-parallel model inference with vLLM and automated evaluation scripts calculating Token F1, ROUGE, and BERTScore against reference ground truth.',
+    ],
+    tags: ['Python', 'PyTorch', 'LLMs', 'Hugging Face', 'vLLM', 'NLP', 'Qwen2.5', 'Information Extraction', 'DeepSeek-R1'],
+  },
+  {
     role: 'Machine Learning Intern',
     company: 'Indian Institute of Technology Guwahati',
     shortCompany: 'IIT Guwahati',

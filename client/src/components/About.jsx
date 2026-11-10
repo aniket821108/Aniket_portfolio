@@ -45,24 +45,25 @@ export default function About() {
               just functional, but genuinely intelligent.
             </p>
             <p className="font-body text-text-secondary text-lg leading-relaxed mb-6">
-              During my ML internship at{' '}
-              <span className="text-accent-light font-medium">IIT Guwahati</span>, I
-              developed predictive maintenance pipelines using Python and time-series
-              vibration sensor data — training classifiers to detect bearing degradation
-              stages and regression models to estimate Remaining Useful Life (RUL).
+              During my research internships at{' '}
+              <span className="text-accent-light font-medium">IIT Patna</span> and{' '}
+              <span className="text-cyan-accent font-medium">IIT Guwahati</span>, I
+              developed advanced NLP benchmarks for legal event extraction using LLMs
+              and architected predictive maintenance pipelines analyzing industrial time-series
+              vibration signals.
             </p>
             <p className="font-body text-text-secondary text-lg leading-relaxed mb-10">
-              On the web side, I architect full-stack MERN applications with clean
-              microservices patterns — including integrating Python ML models directly
-              into production admin dashboards.
+              On the engineering side, I build production full-stack MERN systems and
+              deep learning applications — including remote sensing domain adaptation
+              and deploying AI models directly into scalable dashboards.
             </p>
 
             {/* Stat row */}
             <div className="flex gap-8">
               {[
                 { value: '2+', label: 'Years Coding' },
-                { value: '2', label: 'Major Projects' },
-                { value: '2', label: 'Hackathon Honours' },
+                { value: '4+', label: 'Featured Projects' },
+                { value: '2', label: 'IIT Internships' },
               ].map(({ value, label }) => (
                 <div key={label}>
                   <p className="font-display font-bold text-3xl gradient-text">{value}</p>

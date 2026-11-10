@@ -32,3 +32,6 @@
 - [x] Add Education section (NIT Mizoram, SP Jain)
 - [x] Enhance Footer (LinkedIn, back-to-top, sitemap, quick links)
 - [x] Add Resume download link in Navbar
+- [x] Add IIT Patna Research Internship (NLP & LLMs) to Experience timeline
+- [x] Expand Projects with real research & open-source work (INDILEX, Aerial-LandCover-Segmentation)
+- [x] Add Live GitHub Telemetry component (`GithubActivity.jsx`) fetching live stats, latest push events & top repositories
