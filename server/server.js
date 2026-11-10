@@ -68,6 +68,23 @@ app.use('/api/contact', contactLimiter, contactRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/skills', skillRoutes);
 
+// Root endpoint
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    name: 'Aniket Kumar — Developer Portfolio API',
+    status: 'online',
+    version: '2.0.0',
+    endpoints: {
+      health: '/api/health',
+      projects: '/api/projects',
+      skills: '/api/skills',
+      contact: 'POST /api/contact',
+    },
+    frontendUrl: 'https://aniket-portfolio-sable-rho.vercel.app',
+  });
+});
+
 // Health check
 app.get('/api/health', (req, res) =>
   res.json({ success: true, message: 'API is running', env: process.env.NODE_ENV })
