@@ -16,11 +16,15 @@ function getBaseURL() {
     const cleaned = envUrl.replace(/\/+$/, '');
     return cleaned.endsWith('/api') ? cleaned : `${cleaned}/api`;
   }
+  // When running on the same origin (both frontend & backend on Render), use relative /api
+  if (typeof window !== 'undefined' && window.location.hostname.includes('onrender.com')) {
+    return '/api';
+  }
   // In local development, use the Vite proxy
   if (import.meta.env.DEV) {
     return '/api';
   }
-  // In production (Vercel), default to the live Render backend
+  // In production outside Render (e.g. Vercel), default to the live Render backend
   return 'https://aniket-portfolio-1-2585.onrender.com/api';
 }
 
