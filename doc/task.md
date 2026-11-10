@@ -29,6 +29,6 @@
 - [ ] Add toggle button to Navbar
 
 ### 1.5 New Sections & Navigation
-- [/] Add Education section (UI built, but contains placeholder data like "Your University Name")
-- [/] Enhance Footer (LinkedIn, back-to-top, sitemap) (Needs real LinkedIn URL verification)
+- [x] Add Education section (NIT Mizoram, SP Jain)
+- [x] Enhance Footer (LinkedIn, back-to-top, sitemap, quick links)
 - [x] Add Resume download link in Navbar
